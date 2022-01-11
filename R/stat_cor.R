@@ -219,7 +219,7 @@ StatCor<- ggproto("StatCor", Stat,
 get_p_label <- function(x, accuracy = 0.0001, type = "expression"){
   if(is.null(accuracy)){
     label <- ifelse(x < 2.2e-16, "p < 2.2e-16", 
-                    ifelse(x == 0, "p = 0", paste0("p = ", x))
+                    ifelse(x == 0, "p = 0", paste0("p = ", x)))
   }
   else if (!(accuracy < 1)){
     stop(
